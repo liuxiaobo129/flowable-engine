@@ -51,6 +51,7 @@ public class ProcessParseHandler extends AbstractBpmnParseHandler<Process> {
     }
 
     protected ProcessDefinitionEntity transformProcess(BpmnParse bpmnParse, Process process) {
+        // 执行实例表
         ProcessDefinitionEntity currentProcessDefinition = CommandContextUtil.getProcessDefinitionEntityManager().create();
         bpmnParse.setCurrentProcessDefinition(currentProcessDefinition);
 

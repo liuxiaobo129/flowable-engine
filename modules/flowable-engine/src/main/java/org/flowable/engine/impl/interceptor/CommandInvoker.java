@@ -56,6 +56,7 @@ public class CommandInvoker extends AbstractCommandInterceptor {
     @Override
     @SuppressWarnings("unchecked")
     public <T> T execute(final CommandConfig config, final Command<T> command, CommandExecutor commandExecutor) {
+        // 创建上下文
         final CommandContext commandContext = Context.getCommandContext();
         
         FlowableEngineAgenda agenda = CommandContextUtil.getAgenda(commandContext);
@@ -63,7 +64,7 @@ public class CommandInvoker extends AbstractCommandInterceptor {
             return (T) command.execute(commandContext);
             
         } else {
-
+            // 添加之后执行
             // Execute the command.
             // This will produce operations that will be put on the agenda.
             agenda.planOperation(new Runnable() {

@@ -270,7 +270,7 @@ public class CommandContext {
             }
         }
     }
-    
+    // 为什么放入缓存
     @SuppressWarnings({ "unchecked" })
     public <T> T getSession(Class<T> sessionClass) {
         Session session = sessions.get(sessionClass);

@@ -261,6 +261,7 @@ public class TakeOutgoingSequenceFlowsOperation extends AbstractOperation {
             SequenceFlow sequenceFlow = outgoingSequenceFlows.get(0);
 
             // Reuse existing one
+            // 可以是线也可以是点
             execution.setCurrentFlowElement(sequenceFlow);
             execution.setActive(false);
             outgoingExecutions.add(execution);

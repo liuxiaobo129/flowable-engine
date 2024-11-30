@@ -68,7 +68,7 @@
   <select id="selectDbSchemaVersion" resultType="string">
     select VALUE_ from ${prefix}ACT_GE_PROPERTY where NAME_ = 'schema.version'
   </select>
-
+<!--  selectProperty 查询生成主键Id 字段next.dbid-->
   <select id="selectProperty" parameterType="string" resultMap="propertyResultMap">
     select * from ${prefix}ACT_GE_PROPERTY where NAME_ = #{name}
   </select>

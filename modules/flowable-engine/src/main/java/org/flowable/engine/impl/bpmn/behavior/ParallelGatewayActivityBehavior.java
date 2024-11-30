@@ -111,7 +111,7 @@ public class ParallelGatewayActivityBehavior extends GatewayActivityBehavior {
 
                 }
             }
-
+            // 节点出口
             // TODO: potential optimization here: reuse more then 1 execution, only 1 currently
             CommandContextUtil.getAgenda().planTakeOutgoingSequenceFlowsOperation((ExecutionEntity) execution, false); // false -> ignoring conditions on parallel gw
 

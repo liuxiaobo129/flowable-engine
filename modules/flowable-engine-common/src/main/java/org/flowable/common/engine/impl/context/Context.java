@@ -25,7 +25,7 @@ import org.flowable.common.engine.impl.transaction.TransactionContextHolder;
  * @author Joram Barrez
  */
 public class Context {
-
+    // 每个线程一个CommandContext
     protected static ThreadLocal<Stack<CommandContext>> commandContextThreadLocal = new ThreadLocal<>();
 
     public static CommandContext getCommandContext() {
@@ -35,7 +35,7 @@ public class Context {
         }
         return stack.peek();
     }
-
+    // 一个线程多个commandContext
     public static void setCommandContext(CommandContext commandContext) {
         getStack(commandContextThreadLocal).push(commandContext);
     }

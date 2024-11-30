@@ -313,6 +313,8 @@ public class BpmnDeployer implements EngineDeployer {
      * Returns the ID to use for a new process definition; subclasses may override this to provide their own identification scheme.
      *
      * Process definition ids NEED to be unique across the whole engine!
+     *
+     * 生成执行表ID
      */
     protected String getIdForNewProcessDefinition(ProcessDefinitionEntity processDefinition) {
         String prefixId = "";

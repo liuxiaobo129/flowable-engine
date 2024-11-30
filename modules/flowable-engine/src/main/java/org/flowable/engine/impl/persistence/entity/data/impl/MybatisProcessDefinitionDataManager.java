@@ -44,6 +44,7 @@ public class MybatisProcessDefinitionDataManager extends AbstractProcessDataMana
         return new ProcessDefinitionEntityImpl();
     }
 
+    // 查询最新的
     @Override
     public ProcessDefinitionEntity findLatestProcessDefinitionByKey(String processDefinitionKey) {
         return (ProcessDefinitionEntity) getDbSqlSession().selectOne("selectLatestProcessDefinitionByKey", processDefinitionKey);
