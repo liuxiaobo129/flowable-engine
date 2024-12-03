@@ -120,6 +120,7 @@ public abstract class AbstractQuery<T extends Query<?, ?>, U> extends ListQueryP
     @SuppressWarnings("unchecked")
     public List<U> list() {
         this.resultType = ResultType.LIST;
+        // List<Task> tasks = taskService.createTaskQuery().processInstanceId(id).list();将会调用
         if (commandExecutor != null) {
             return (List<U>) commandExecutor.execute(this);
         }

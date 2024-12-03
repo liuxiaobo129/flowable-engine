@@ -204,6 +204,7 @@ public class AppEngineConfiguration extends AbstractBuildableEngineConfiguration
         initEngineConfigurations();
         initConfigurators();
         configuratorsBeforeInit();
+        // 初始化定时任务时间； 这个需要注意下启动时间； 定时任务一致不变
         initClock();
         initObjectMapper();
         initCommandContextFactory();

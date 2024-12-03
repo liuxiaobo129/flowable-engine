@@ -220,7 +220,7 @@ public class SpringProcessEngineConfiguration extends ProcessEngineConfiguration
     public void setDeploymentStrategies(Collection<AutoDeploymentStrategy<ProcessEngine>> deploymentStrategies) {
         this.deploymentStrategies = deploymentStrategies;
     }
-
+   // spring AbstractApplicationContext# getLifecycleProcessor().onRefresh();
     @Override
     public void start() {
         synchronized (lifeCycleMonitor) {

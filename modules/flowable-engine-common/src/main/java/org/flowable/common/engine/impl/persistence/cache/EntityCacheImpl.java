@@ -27,7 +27,7 @@ import org.flowable.common.engine.impl.persistence.entity.Entity;
 public class EntityCacheImpl implements EntityCache {
 
     protected Map<Class<?>, Map<String, CachedEntity>> cachedObjects = new HashMap<>();
-
+    // 数据库查询的数据放入缓存
     @Override
     public CachedEntity put(Entity entity, boolean storeState) {
         Map<String, CachedEntity> classCache = cachedObjects.get(entity.getClass());

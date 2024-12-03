@@ -105,7 +105,7 @@ public class CommandContextInterceptor extends AbstractCommandInterceptor {
             return next.execute(config, command, commandExecutor);
 
         } catch (Throwable e) {
-
+            // 处理异常，不同拦截器分别打印日志、回滚等
             commandContext.exception(e);
 
         } finally {

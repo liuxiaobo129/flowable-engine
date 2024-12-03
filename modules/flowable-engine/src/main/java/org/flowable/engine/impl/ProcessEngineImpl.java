@@ -80,6 +80,7 @@ public class ProcessEngineImpl implements ProcessEngine {
         this.transactionContextFactory = processEngineConfiguration.getTransactionContextFactory();
 
         if (processEngineConfiguration.getSchemaManagementCmd() != null) {
+            // 创建表
             commandExecutor.execute(processEngineConfiguration.getSchemaCommandConfig(), processEngineConfiguration.getSchemaManagementCmd());
         }
 
